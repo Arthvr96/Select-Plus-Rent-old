@@ -77,7 +77,7 @@ class HamburgerMenu extends React.Component {
     const { isOpen } = this.state;
     return (
       <>
-        <ButtonHamburger isOpen={isOpen} onClick={this.toggleHamburger}>
+        <ButtonHamburger className="hamburger" isOpen={isOpen} onClick={this.toggleHamburger}>
           <HamburgerBox>
             <HamburgerInner isOpen={isOpen} />
           </HamburgerBox>

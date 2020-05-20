@@ -12,6 +12,13 @@ const Wrapper = styled.div`
   overflow-x: hidden;
 `;
 
+const Section = styled.div`
+  width: 100%;
+  height: 100vh;
+  background: red;
+  border: 5px solid black;
+`;
+
 const Root = () => {
   return (
     <Wrapper>
@@ -19,8 +26,11 @@ const Root = () => {
       <ThemeProvider theme={primaryTheme}>
         <GlobalStyles />
         <Header />
-        <Hero />
-        <Whyus />
+        <Hero id="Section1" />
+        <Whyus id="Section2" />
+        <Section id="Section3" />
+        <Section id="Section4" />
+        <Section id="Section5" />
       </ThemeProvider>
     </Wrapper>
   );

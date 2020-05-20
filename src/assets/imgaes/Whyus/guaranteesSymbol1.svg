@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="52px" viewBox="0 0 54 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>shapes-and-symbols</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-10.9%" y="-2.1%" width="121.9%" height="104.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hero-M" transform="translate(-153.000000, -626.000000)" fill="#2797FF" fill-rule="nonzero">
+            <g id="Why-us?" filter="url(#filter-1)" transform="translate(0.000000, 425.000000)">
+                <g id="First" transform="translate(10.000000, 170.000000)">
+                    <g id="Content" transform="translate(31.000000, 33.000000)">
+                        <g id="shapes-and-symbols" transform="translate(116.000000, 0.000000)">
+                            <path d="M10.2957669,44 C9.79178717,44 9.29131704,43.8430648 8.86419778,43.5347993 C8.06856973,42.9592535 7.69690223,41.9700014 7.91344502,41.0154292 L10.8727464,28.0041717 L0.836671633,19.2193048 C0.0989520054,18.5765011 -0.182869442,17.5585242 0.120009743,16.6270719 C0.422888838,15.6973711 1.24694477,15.0391541 2.22261577,14.9491266 L15.5015683,13.7458402 L20.7515907,1.48282723 C21.1387005,0.581851164 22.020314,0 22.9998456,0 C23.9793771,0 24.8609906,0.581851164 25.2481004,1.48072538 L30.4981229,13.7458402 L43.7749696,14.9491266 C44.7527464,15.0370523 45.5768023,15.6973711 45.8796815,16.6270719 C46.1825606,17.5567727 45.9024939,18.5765011 45.1647743,19.2193048 L35.1286995,28.0024203 L38.0880009,41.0133274 C38.3048947,41.9700014 37.9328763,42.9592535 37.1375991,43.5330478 C36.3440768,44.106842 35.28593,44.1509801 34.4502923,43.6496983 L22.9998456,36.8198653 L11.5493988,43.6535516 C11.162289,43.8829993 10.7309582,44 10.2957669,44 Z M22.9998456,33.877681 C23.435037,33.877681 23.8660168,33.9943314 24.2534775,34.2237791 L35.0599112,40.6749359 L32.2669653,28.3944079 C32.0676195,27.5204051 32.3648833,26.6078691 33.0415357,26.0165597 L42.5178281,17.7214146 L29.9804557,16.5850357 C29.0777846,16.5027148 28.3014593,15.9362769 27.9487437,15.1060618 L22.9998456,3.53349356 L18.0449811,15.1078133 C17.6961261,15.9324236 16.9198008,16.4988615 16.0192354,16.5811824 L3.48010831,17.7175612 L12.9560497,26.0127064 C13.6348078,26.6057672 13.9317207,27.5165517 13.7306201,28.3926563 L10.9397799,40.6728341 L21.7462136,34.2237791 C22.1333234,33.9943314 22.5646542,33.877681 22.9998456,33.877681 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-
+import gsap from 'gsap';
 import HamburgerMenu from 'components/HamburgerMenu/HamburgerMenu';
 import logo from 'assets/imgaes/HeroSection/logo2.png';
 import { zindex } from 'utilites/zindex';
 
 const HeaderSection = styled.header`
   position: fixed;
-  z-index: 1000;
+  z-index: ${zindex.lvl8};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +19,6 @@ const HeaderSection = styled.header`
 const Logo = styled.h1`
   position: relative;
   z-index: ${zindex.lvl8};
-
   margin-left: 1.5rem;
   display: inline-block;
   img {
@@ -29,8 +28,32 @@ const Logo = styled.h1`
 `;
 
 const Header = () => {
+  let headerSection = useRef(null);
+  let scrollPos = window.scrollY;
+
+  const parallax = () => {
+    const oldScrollPos = scrollPos;
+
+    scrollPos = window.scrollY;
+    if (oldScrollPos < scrollPos) {
+      if (window.scrollY > 57) {
+        gsap.to(headerSection, { duration: 1, y: -56 });
+      }
+    } else if (oldScrollPos > scrollPos) {
+      gsap.to(headerSection, { duration: 1.5, y: 0 });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', parallax, true);
+  });
+
   return (
-    <HeaderSection>
+    <HeaderSection
+      ref={(el) => {
+        headerSection = el;
+      }}
+    >
       <Logo>
         <a href="/">
           <img src={logo} alt="Select Plus Rent" />
