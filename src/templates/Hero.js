@@ -1,19 +1,43 @@
-import React from 'react';
+import CarouselWrapper from 'components/CarouselWrapper/CarouselWrapper';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import Header from 'components/Header/Header';
-import Slider from 'components/Slider/Slider';
-// import img1 from 'assets/imgaes/HeroSection/slider/slajder1.jpg';
+import media from 'utilites/media';
+import gsap from 'gsap';
 
 const HeroSection = styled.section`
+  position: fixed;
+  top: 5.6rem;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
+  margin-top: ${({ position }) => position}px;
+  ${media.desktop`
+    height:100vh;
+  `}
 `;
 
 const Hero = () => {
+  let herosection = useRef(null);
+
+  const getPos = () => {
+    const heroheight = herosection.offsetHeight;
+    if (window.scrollY < heroheight) {
+      let newPos = 0;
+      newPos = (-1 * window.scrollY) / 2;
+      gsap.set(herosection, { y: newPos });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', getPos, true);
+  });
+
   return (
-    <HeroSection>
-      <Header />
-      <Slider />
+    <HeroSection
+      ref={(el) => {
+        herosection = el;
+      }}
+    >
+      <CarouselWrapper />
     </HeroSection>
   );
 };

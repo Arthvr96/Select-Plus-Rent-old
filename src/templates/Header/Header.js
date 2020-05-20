@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import HamburgerMenu from 'components/HamburgerMenu/HamburgerMenu';
 import logo from 'assets/imgaes/HeroSection/logo2.png';
 import { zindex } from 'utilites/zindex';
 
 const HeaderSection = styled.header`
+  position: fixed;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
