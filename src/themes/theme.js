@@ -1,9 +1,10 @@
 export const primaryTheme = {
   colors: {
     primary: '#ffffff',
-    secondary: '#000000',
+    secondary: '#008BFE',
     tertiary: '#0F2934',
     lightgrey: '#E9EFF2',
+    lightergrey: '#F4F8F9',
     font: {
       primary: '#000000',
       secondary: '#ffffff',

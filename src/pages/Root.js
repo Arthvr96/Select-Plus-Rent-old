@@ -6,17 +6,11 @@ import { primaryTheme } from 'themes/theme';
 import Header from 'templates/Header/Header';
 import Hero from 'templates/Hero';
 import Whyus from 'templates/Whyus/Whyus';
+import CarsInfo from 'templates/CarsInfo/CarsInfo';
 
 const Wrapper = styled.div`
   position: relative;
   overflow-x: hidden;
-`;
-
-const Section = styled.div`
-  width: 100%;
-  height: 100vh;
-  background: red;
-  border: 5px solid black;
 `;
 
 const Root = () => {
@@ -28,9 +22,7 @@ const Root = () => {
         <Header />
         <Hero id="Section1" />
         <Whyus id="Section2" />
-        <Section id="Section3" />
-        <Section id="Section4" />
-        <Section id="Section5" />
+        <CarsInfo />
       </ThemeProvider>
     </Wrapper>
   );

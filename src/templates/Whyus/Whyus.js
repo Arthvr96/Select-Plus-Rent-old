@@ -12,7 +12,7 @@ const WhyusWrapper = styled.section`
   width: 100%;
   margin-top: calc(50vh + 5.6rem);
   background-color: ${({ theme }) => theme.colors.primary};
-  box-shadow: 0px -10px 25px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -10px 25px 0px rgba(0, 0, 0, 0.75);
 
   ${media.desktop`
     margin-top: calc(100vh + 5.6rem);
@@ -25,11 +25,12 @@ const Header = styled.h3`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight.m};
   color: ${({ theme }) => theme.colors.font.primary};
+  text-align: center;
 `;
 
 const Paragraph = styled.p`
   width: 80%;
-  margin: 3rem 0;
+  margin: 1.5rem 0 3rem 0;
   font-size: ${({ theme }) => theme.size.mobile.s};
   font-weight: ${({ theme }) => theme.fontWeight.light};
   line-height: ${({ theme }) => theme.lineHeight.s};
@@ -39,6 +40,7 @@ const Paragraph = styled.p`
 
 const Wrapperguarantees = styled.div`
   display: flex;
+  width: 90%;
   flex-direction: column;
   align-items: center;
 `;
@@ -50,7 +52,7 @@ const Guarantee = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 34.5rem;
+  width: 100%;
   height: 25rem;
 
   img {
@@ -59,10 +61,12 @@ const Guarantee = styled.div`
 `;
 
 const GuaranteeHeader = styled.h4`
+  max-width: 95%;
   font-size: ${({ theme }) => theme.size.mobile.m};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight.m};
   color: ${({ theme }) => theme.colors.font.primary};
+  text-align: center;
 `;
 const GuaranteeParagraph = styled.p`
   width: 80%;
