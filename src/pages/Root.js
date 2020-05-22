@@ -15,13 +15,13 @@ const Wrapper = styled.div`
 
 const Root = () => {
   return (
-    <Wrapper>
+    <Wrapper id="Section0">
       <SEO />
       <ThemeProvider theme={primaryTheme}>
         <GlobalStyles />
         <Header />
-        <Hero id="Section1" />
-        <Whyus id="Section2" />
+        <Hero />
+        <Whyus />
         <CarsInfo />
       </ThemeProvider>
     </Wrapper>

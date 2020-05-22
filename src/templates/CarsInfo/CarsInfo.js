@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { carsInfo as data } from 'data/carsInfo';
 
 const CarsInfoSection = styled.section`
+  z-index: 45;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   position: relative;
-  transform: translateY(-3px);
   background: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -112,7 +112,7 @@ const paragraph = 'Zrealizuj swoje marzenia z naszą pomocą !';
 
 const CarsInfo = () => {
   return (
-    <CarsInfoSection>
+    <CarsInfoSection id="Section2">
       <Header>{header}</Header>
       <Paragraph>{paragraph}</Paragraph>
       <CarsWrapper>

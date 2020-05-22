@@ -5,6 +5,7 @@ import { guarantees as data } from 'data/guarantees';
 
 // import gsap from 'gsap';
 const WhyusWrapper = styled.section`
+  z-index: 50;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,20 +44,24 @@ const Wrapperguarantees = styled.div`
   width: 90%;
   flex-direction: column;
   align-items: center;
+
+  .guaratnee:last-of-type {
+    margin-bottom: 2.4rem;
+  }
 `;
 
 const Guarantee = styled.div`
-  margin-bottom: 3rem;
-  border: 2px solid ${({ theme }) => theme.colors.lightgrey};
+  margin-bottom: 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
-  height: 25rem;
+  border: 1px solid ${({ theme }) => theme.colors.lightgrey};
+  padding: 2rem 2rem;
 
-  img {
-    margin-top: 3.2rem;
+  div {
+    display: flex;
+    width: 6.4rem;
+    justify-content: center;
   }
 `;
 
@@ -66,9 +71,10 @@ const GuaranteeHeader = styled.h4`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight.m};
   color: ${({ theme }) => theme.colors.font.primary};
-  text-align: center;
+  margin-left: 2rem;
 `;
 const GuaranteeParagraph = styled.p`
+  display: none;
   width: 80%;
   margin-bottom: 3.2rem;
   font-size: ${({ theme }) => theme.size.mobile.s};
@@ -83,13 +89,15 @@ const paragraph = 'Postaw na sprawdzoną firmę z indywidualnym podejściem do k
 
 const Whyus = () => {
   return (
-    <WhyusWrapper className="whyusSection">
+    <WhyusWrapper id="Section1" className="whyusSection">
       <Header>{header}</Header>
       <Paragraph>{paragraph}</Paragraph>
       <Wrapperguarantees>
         {data.map((item) => (
-          <Guarantee key={item.header}>
-            <img alt={item.header} src={item.img} />
+          <Guarantee className="guaratnee" key={item.header}>
+            <div>
+              <img alt={item.header} src={item.img} />
+            </div>
             <GuaranteeHeader>{item.header}</GuaranteeHeader>
             <GuaranteeParagraph>{item.paragraph}</GuaranteeParagraph>
           </Guarantee>
