@@ -19,12 +19,9 @@ const Hero = () => {
   let herosection = useRef(null);
 
   const getPos = () => {
-    const heroheight = herosection.offsetHeight;
-    if (window.scrollY < heroheight) {
-      let newPos = 0;
-      newPos = (-1 * window.scrollY) / 2;
-      gsap.set(herosection, { y: newPos });
-    }
+    let newPos = 0;
+    newPos = (-1 * window.scrollY) / 2;
+    gsap.set(herosection, { y: newPos });
   };
 
   useEffect(() => {
