@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import fixedBg from 'assets/imgaes/InfoAndAbout/funfact-bg.jpg';
-// import gsap from 'gsap';
 
 const FixedBackground = styled.div`
   position: fixed;
@@ -11,22 +10,14 @@ const FixedBackground = styled.div`
   display: block;
   width: 100%;
   height: 100vh;
-  background: url(${fixedBg}) no-repeat;
-  background-size: cover;
+  background: url(${fixedBg}) no-repeat 40% 10%;
+  background-size: auto 100%;
 `;
 
 const Info = styled.section`
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   background: rgba(17, 46, 59, 0.7);
-`;
-
-const AboutUs = styled.section`
-  position: relative;
-  z-index: 5000;
-  width: 100%;
-  height: 50vh;
-  background: ${({ theme }) => theme.colors.tertiary};
 `;
 
 const InfoAndAbout = () => {
@@ -34,7 +25,6 @@ const InfoAndAbout = () => {
     <>
       <FixedBackground />
       <Info />
-      <AboutUs />
     </>
   );
 };

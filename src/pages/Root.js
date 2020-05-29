@@ -8,7 +8,7 @@ import Hero from 'templates/Hero';
 import Whyus from 'templates/Whyus/Whyus';
 import CarsInfo from 'templates/CarsInfo/CarsInfo';
 import Services from 'templates/Services/Services';
-import InfoAndAbout from 'templates/InfoAndAbout/InfoAndAbout';
+import Info from 'templates/Info/Info';
 
 const Wrapper = styled.div`
   position: relative;
@@ -26,7 +26,7 @@ const Root = () => {
         <Whyus />
         <CarsInfo />
         <Services />
-        <InfoAndAbout />
+        <Info />
       </ThemeProvider>
     </Wrapper>
   );
