@@ -89,7 +89,7 @@ const paragraph = 'Postaw na sprawdzoną firmę z indywidualnym podejściem do k
 
 const Whyus = () => {
   return (
-    <WhyusWrapper id="Section1" className="whyusSection">
+    <WhyusWrapper className="whyusSection">
       <Header>{header}</Header>
       <Paragraph>{paragraph}</Paragraph>
       <Wrapperguarantees>

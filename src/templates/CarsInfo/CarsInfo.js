@@ -112,7 +112,7 @@ const paragraph = 'Zrealizuj swoje marzenia z naszą pomocą !';
 
 const CarsInfo = () => {
   return (
-    <CarsInfoSection id="Section2">
+    <CarsInfoSection id="Section1">
       <Header>{header}</Header>
       <Paragraph>{paragraph}</Paragraph>
       <CarsWrapper>

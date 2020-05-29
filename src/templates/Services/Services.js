@@ -58,7 +58,7 @@ const servicesInfo = [
 
 const Services = () => {
   return (
-    <Wrapper>
+    <Wrapper id="Section2">
       <Header>Usługi dodatkowe</Header>
       <Paragraph>Sprawdz co jeszcze możemy Ci zaoferować!</Paragraph>
       <ServicesWrapper>
