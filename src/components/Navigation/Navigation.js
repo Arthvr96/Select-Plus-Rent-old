@@ -11,7 +11,7 @@ const NavigationSection = styled.nav`
   top: 0;
   right: -100vw;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh + 5.6rem);
   transform: ${({ isOpen }) => (isOpen ? 'translateX(-100vw);' : 'translateX(0);')};
   background-color: ${({ theme }) => theme.colors.tertiary};
   transition: transform 1s ease-in-out;
@@ -47,7 +47,7 @@ const ContactBox = styled.div`
   width: 100%;
   height: 10rem;
   position: absolute;
-  bottom: 0;
+  bottom: 5.6rem;
   left: 0;
   background: #0c212a;
   transform: ${({ isOpen }) => (isOpen ? 'translateY(0%);' : 'translateY(100%);')};
@@ -62,6 +62,15 @@ const ContactBox = styled.div`
   p span {
     font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
+`;
+
+const AdditionalBgContactBox = styled.div`
+  width: 100%;
+  height: 5.6rem;
+  background: #0c212a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `;
 
 const Navigation = ({ isOpen, linkActived }) => {
@@ -84,6 +93,7 @@ const Navigation = ({ isOpen, linkActived }) => {
           <span>Mail:</span> kontakt@selectplusrent.pl
         </p>
       </ContactBox>
+      <AdditionalBgContactBox />
     </NavigationSection>
   );
 };

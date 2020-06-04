@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import gsap from 'gsap';
 import HamburgerMenu from 'components/HamburgerMenu/HamburgerMenu';
 import logo from 'assets/imgaes/HeroSection/logo2.png';
 import { zindex } from 'utilites/zindex';
@@ -14,6 +13,15 @@ const HeaderSection = styled.header`
   width: 100%;
   height: 5.6rem;
   background-color: ${({ theme }) => theme.colors.tertiary};
+  transition: transform 0.4s ease-in-out;
+
+  &.isHide {
+    transform: translateY(-5.6rem);
+  }
+
+  &.isVisible {
+    transform: translateY(0);
+  }
 `;
 
 const Logo = styled.h1`
@@ -30,22 +38,35 @@ const Logo = styled.h1`
 const Header = () => {
   let headerSection = useRef(null);
   let scrollPos = window.scrollY;
+  let isVisable = false;
 
-  const parallax = () => {
+  const changeVisable = () => {
+    if (isVisable === false) {
+      isVisable = true;
+    } else {
+      isVisable = false;
+    }
+  };
+
+  const showHideAnimation = () => {
     const oldScrollPos = scrollPos;
-
     scrollPos = window.scrollY;
-    if (oldScrollPos < scrollPos) {
-      if (window.scrollY > 57) {
-        gsap.to(headerSection, { duration: 1, y: -56 });
+
+    if (!isVisable) {
+      if (oldScrollPos < scrollPos) {
+        if (window.scrollY > 57) {
+          headerSection.classList.add('isHide');
+          headerSection.classList.remove('isVisible');
+        }
+      } else if (oldScrollPos > scrollPos) {
+        headerSection.classList.add('isVisible');
+        headerSection.classList.remove('isHide');
       }
-    } else if (oldScrollPos > scrollPos) {
-      gsap.to(headerSection, { duration: 1.5, y: 0 });
     }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', parallax, true);
+    window.addEventListener('scroll', showHideAnimation, true);
   });
 
   return (
@@ -59,7 +80,7 @@ const Header = () => {
           <img src={logo} alt="Select Plus Rent" />
         </a>
       </Logo>
-      <HamburgerMenu />
+      <HamburgerMenu isVisable={changeVisable} />
     </HeaderSection>
   );
 };

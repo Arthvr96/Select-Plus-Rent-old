@@ -66,11 +66,13 @@ class HamburgerMenu extends React.Component {
 
   toggleHamburger = () => {
     const { isOpen } = this.state;
+    const { isVisable } = this.props;
     if (isOpen) {
       this.setState({ isOpen: false });
     } else if (!isOpen) {
       this.setState({ isOpen: true });
     }
+    isVisable();
   };
 
   render() {
