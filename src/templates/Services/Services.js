@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import car from 'assets/imgaes/Services/car.svg';
 import limusine from 'assets/imgaes/Services/limusine.svg';
-// import gsap from 'gsap';
 
 const Wrapper = styled.section`
   display: flex;
@@ -23,8 +22,7 @@ const Header = styled.h2`
 `;
 
 const Paragraph = styled.p`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin: 2rem 0 3rem;
   font-size: ${({ theme }) => theme.size.mobile.s};
   font-weight: ${({ theme }) => theme.fontWeight.light};
   line-height: ${({ theme }) => theme.lineHeight.s};
@@ -34,8 +32,9 @@ const Paragraph = styled.p`
 const ServicesWrapper = styled.section`
   display: flex;
   width: 100%;
-  background: ${({ theme }) => theme.colors.lightergrey};
   margin-bottom: 2rem;
+  background: ${({ theme }) => theme.colors.lightergrey};
+
   div:last-of-type {
     margin-right: 2rem;
   }
@@ -46,9 +45,13 @@ const ServicesOption = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border: 1px solid #ededed;
   margin: 2rem 0 2rem 2rem;
   padding: 3rem 0;
+  border: 1px solid #ededed;
+
+  p {
+    margin-top: 1rem;
+  }
 `;
 
 const servicesInfo = [

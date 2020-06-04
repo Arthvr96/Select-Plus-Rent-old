@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from 'assets/imgaes/HeroSection/logo2.png';
 import { aboutInfo as data } from 'data/aboutInfo';
-// import gsap from 'gsap';
 
 const AboutWrapper = styled.section`
   width: 100%;
@@ -27,6 +26,7 @@ const Paragraph = styled.p`
   span {
     font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
+
   margin: 0 2rem 1rem 1rem;
   font-size: ${({ theme }) => theme.size.mobile.s};
   font-weight: ${({ theme }) => theme.fontWeight.light};
@@ -45,8 +45,7 @@ const ContactWrapper = styled.ul`
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0 2rem;
   }
 
   li .iconWrapper {
@@ -74,8 +73,8 @@ const ContactWrapper = styled.ul`
 
 const Footer = styled.footer`
   margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 const FooterContent = styled.p`
@@ -100,15 +99,15 @@ const About = () => {
       <SocialIcon src={data.instagramIcon} alt="instragramIcon" />
       <Header>Kontakt</Header>
       <ContactWrapper>
-        {data.contact.map((item) => (
-          <li key={item.title}>
+        {data.contact.map(({ title, icon, content, contentcd }) => (
+          <li key={title}>
             <div className="iconWrapper">
-              <img src={item.icon} alt={item.title} />
+              <img src={icon} alt={title} />
             </div>
             <div>
-              <h4>{item.title}</h4>
-              <p>{item.content}</p>
-              <p>{item.contentcd}</p>
+              <h4>{title}</h4>
+              <p>{content}</p>
+              <p>{contentcd}</p>
             </div>
           </li>
         ))}

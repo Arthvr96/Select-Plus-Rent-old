@@ -5,8 +5,8 @@ import { guarantees as data } from 'data/guarantees';
 
 // import gsap from 'gsap';
 const WhyusWrapper = styled.section`
-  z-index: 50;
   position: relative;
+  z-index: 50;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,9 +41,9 @@ const Paragraph = styled.p`
 
 const Wrapperguarantees = styled.div`
   display: flex;
-  width: 90%;
   flex-direction: column;
   align-items: center;
+  width: 90%;
 
   .guaratnee:last-of-type {
     margin-bottom: 2.4rem;
@@ -51,27 +51,27 @@ const Wrapperguarantees = styled.div`
 `;
 
 const Guarantee = styled.div`
-  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   width: 100%;
-  border: 1px solid ${({ theme }) => theme.colors.lightgrey};
+  margin-bottom: 2rem;
   padding: 2rem 2rem;
+  border: 1px solid ${({ theme }) => theme.colors.lightgrey};
 
   div {
     display: flex;
-    width: 6.4rem;
     justify-content: center;
+    width: 6.4rem;
   }
 `;
 
 const GuaranteeHeader = styled.h4`
   max-width: 95%;
+  margin-left: 2rem;
   font-size: ${({ theme }) => theme.size.mobile.m};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight.m};
   color: ${({ theme }) => theme.colors.font.primary};
-  margin-left: 2rem;
 `;
 const GuaranteeParagraph = styled.p`
   display: none;
@@ -84,22 +84,22 @@ const GuaranteeParagraph = styled.p`
   text-align: center;
 `;
 
-const header = 'Dlaczego warto wybrać nas ?';
-const paragraph = 'Postaw na sprawdzoną firmę z indywidualnym podejściem do klienta.';
+const headerOne = 'Dlaczego warto wybrać nas ?';
+const paragraphOne = 'Postaw na sprawdzoną firmę z indywidualnym podejściem do klienta.';
 
 const Whyus = () => {
   return (
     <WhyusWrapper className="whyusSection">
-      <Header>{header}</Header>
-      <Paragraph>{paragraph}</Paragraph>
+      <Header>{headerOne}</Header>
+      <Paragraph>{paragraphOne}</Paragraph>
       <Wrapperguarantees>
-        {data.map((item) => (
-          <Guarantee className="guaratnee" key={item.header}>
+        {data.map(({ header, img, paragraph }) => (
+          <Guarantee className="guaratnee" key={header}>
             <div>
-              <img alt={item.header} src={item.img} />
+              <img alt={header} src={img} />
             </div>
-            <GuaranteeHeader>{item.header}</GuaranteeHeader>
-            <GuaranteeParagraph>{item.paragraph}</GuaranteeParagraph>
+            <GuaranteeHeader>{header}</GuaranteeHeader>
+            <GuaranteeParagraph>{paragraph}</GuaranteeParagraph>
           </Guarantee>
         ))}
       </Wrapperguarantees>

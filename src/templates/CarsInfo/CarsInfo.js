@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { carsInfo as data } from 'data/carsInfo';
 
 const CarsInfoSection = styled.section`
+  position: relative;
   z-index: 45;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  position: relative;
   background: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -43,6 +43,7 @@ const Car = styled.div`
   margin-bottom: 3rem;
   background: ${({ theme }) => theme.colors.primary};
   box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.25);
+
   img {
     width: 100%;
   }
@@ -67,18 +68,19 @@ const CarDescription = styled.p`
 const CarTechInfo = styled.ul`
   margin: 0 0 3.2rem 4rem;
   color: ${({ theme }) => theme.colors.secondary};
+
   li {
     font-size: ${({ theme }) => theme.size.mobile.s};
     font-weight: ${({ theme }) => theme.fontWeight.normal};
     line-height: ${({ theme }) => theme.lineHeight.s};
   }
+
   li span {
     color: ${({ theme }) => theme.colors.font.primary};
   }
 `;
 
 const PriceingWrapper = styled.div`
-  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
   margin: 0 2rem 2rem 2rem;
@@ -86,10 +88,10 @@ const PriceingWrapper = styled.div`
 
 const PriceBox = styled.div`
   display: flex;
-  width: 24%;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 24%;
   padding: 1.1rem 1rem;
   background: ${({ theme, isHide }) => (isHide ? 'transparent' : theme.colors.secondary)};
 
@@ -111,14 +113,27 @@ const header = 'Flota pojazdów Select + Rent';
 const paragraph = 'Zrealizuj swoje marzenia z naszą pomocą !';
 
 const CarsInfo = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+  const deviceChecker = () => {
+    if (window.innerWidth > 1100) {
+      setIsDesktop(true);
+    } else {
+      setIsDesktop(false);
+    }
+  };
+
+  useEffect(() => {
+    deviceChecker();
+  });
+
   return (
     <CarsInfoSection id="Section1">
       <Header>{header}</Header>
       <Paragraph>{paragraph}</Paragraph>
       <CarsWrapper>
-        {data.map(({ img, name, description, techInfo, priceingInfo }) => (
+        {data.map(({ img, imgm, name, description, techInfo, priceingInfo }) => (
           <Car key={name}>
-            <img alt={name} src={img} />
+            <img alt={name} src={isDesktop ? img : imgm} />
             <CarName>{name}</CarName>
             <CarDescription>{description}</CarDescription>
             <CarTechInfo>

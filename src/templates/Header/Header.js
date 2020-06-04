@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import { zindex } from 'utilites/zindex';
 import HamburgerMenu from 'components/HamburgerMenu/HamburgerMenu';
 import logo from 'assets/imgaes/HeroSection/logo2.png';
-import { zindex } from 'utilites/zindex';
 
 const HeaderSection = styled.header`
   position: fixed;
@@ -27,8 +27,9 @@ const HeaderSection = styled.header`
 const Logo = styled.h1`
   position: relative;
   z-index: ${zindex.lvl8};
-  margin-left: 1.5rem;
   display: inline-block;
+  margin-left: 1.5rem;
+
   img {
     width: 10rem;
     height: auto;

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import fixedBg from 'assets/imgaes/InfoAndAbout/funfact-bg.jpg';
 
 const FixedBackground = styled.div`
   position: fixed;
+  z-index: -1;
   top: 0;
   left: 0;
-  z-index: -1;
-  display: block;
+  display: ${({ isVisible }) => (isVisible ? 'block' : 'none')};
   width: 100%;
   height: 100vh;
   background: url(${fixedBg}) no-repeat 40% 10%;
@@ -26,13 +26,13 @@ const InfoWrapper = styled.section`
   div.grid {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     display: grid;
-    margin: 2rem 1rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    margin: 2rem 1rem;
+    transform: translateY(-50%);
   }
 `;
 
@@ -54,10 +54,11 @@ const Paragraph = styled.h3`
 const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
+  align-items: center;
   padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.1);
+
   h4 {
     font-size: ${({ theme }) => theme.size.mobile.l};
     font-weight: ${({ theme }) => theme.fontWeight.heavy};
@@ -65,6 +66,7 @@ const InfoBox = styled.div`
     color: ${({ theme }) => theme.colors.font.secondary};
     text-align: center;
   }
+
   h3 {
     width: 90%;
     font-size: ${({ theme }) => theme.size.mobile.s};
@@ -79,9 +81,25 @@ const InfoBox = styled.div`
 const infoData = ['Kaucji', 'Za dostawę auta*', 'Odwołanie rezerwacji', 'Minimalny wiek'];
 
 const Info = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const showFixedBg = () => {
+    if (window.scrollY > window.innerHeight) {
+      if (!isVisible) {
+        setIsVisible(true);
+      }
+    } else if (isVisible) {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', showFixedBg, true);
+  });
+
   return (
     <>
-      <FixedBackground />
+      <FixedBackground isVisible={isVisible} />
       <InfoWrapper>
         <div>
           <Header>Informacje</Header>

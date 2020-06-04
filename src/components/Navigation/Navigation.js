@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 import { zindex } from 'utilites/zindex';
 import { NavigationLinks as data } from 'data/navigationLinks';
-import { Link } from 'react-scroll';
 
 const NavigationSection = styled.nav`
   display: block;
@@ -20,8 +20,8 @@ const NavigationSection = styled.nav`
 const NavigationList = styled.ul`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
   list-style: none;
@@ -52,6 +52,7 @@ const ContactBox = styled.div`
   background: #0c212a;
   transform: ${({ isOpen }) => (isOpen ? 'translateY(0%);' : 'translateY(100%);')};
   transition: transform 0.8s 0.8s ease-out;
+
   p {
     font-size: ${({ theme }) => theme.size.mobile.s};
     line-height: ${({ theme }) => theme.lineHeight.s};
@@ -65,12 +66,12 @@ const ContactBox = styled.div`
 `;
 
 const AdditionalBgContactBox = styled.div`
-  width: 100%;
-  height: 5.6rem;
-  background: #0c212a;
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
+  height: 5.6rem;
+  background: #0c212a;
 `;
 
 const Navigation = ({ isOpen, linkActived }) => {

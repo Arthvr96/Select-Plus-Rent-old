@@ -7,9 +7,17 @@ import car6 from 'assets/imgaes/Cars/Car6.jpg';
 import car7 from 'assets/imgaes/Cars/Car7.jpg';
 import car8 from 'assets/imgaes/Cars/Car8.jpg';
 
+import car2m from 'assets/imgaes/Cars/Car2mobile.jpg';
+import car3m from 'assets/imgaes/Cars/Car3mobile.jpg';
+import car4m from 'assets/imgaes/Cars/Car4mobile.jpg';
+import car5m from 'assets/imgaes/Cars/Car5mobile.jpg';
+import car7m from 'assets/imgaes/Cars/Car7mobile.jpg';
+import car8m from 'assets/imgaes/Cars/Car8mobile.jpg';
+
 export const carsInfo = [
   {
     img: car1,
+    imgm: car1,
     name: 'Audi R8 V10',
     description: 'Głośny potwór z V10 za plecami',
     techInfo: ['610KM', '4x4', 'Automatyczna', 'Benzyna'],
@@ -34,6 +42,7 @@ export const carsInfo = [
   },
   {
     img: car2,
+    imgm: car2m,
     name: 'BMW M2 Competition R8 V10',
     description: 'Mocne, kompaktowe BMW z Bawarii',
     techInfo: ['410KM', 'Tył', 'Automatyczna', 'Benzyna'],
@@ -58,6 +67,7 @@ export const carsInfo = [
   },
   {
     img: car3,
+    imgm: car3m,
     name: 'Mercedes-AMG A45S',
     description: `Najnowsza odsłona najszybszego hot-hatch'a na rynku!`,
     techInfo: ['421KM', '4x4', 'Automatyczna', 'Benzyna'],
@@ -82,6 +92,7 @@ export const carsInfo = [
   },
   {
     img: car4,
+    imgm: car4m,
     name: 'Mercedes-AMG A45',
     description: 'Najmocniejsza dwulitrówka świata!',
     techInfo: ['420KM', '4x4', 'Automatyczna', 'Benzyna'],
@@ -106,6 +117,7 @@ export const carsInfo = [
   },
   {
     img: car5,
+    imgm: car5m,
     name: 'Lexus LC500',
     description: 'Luksusowe coupé o niesamowitych osiągach',
     techInfo: ['550KM', 'Tył', 'Automatyczna', 'Benzyna'],
@@ -129,6 +141,7 @@ export const carsInfo = [
   },
   {
     img: car6,
+    imgm: car6,
     name: 'Audi RS3',
     description: 'Hot-hatch z piekła rodem!',
     techInfo: ['400KM', '4x4', 'Automatyczna', 'Benzyna'],
@@ -153,6 +166,7 @@ export const carsInfo = [
   },
   {
     img: car7,
+    imgm: car7m,
     name: 'Ford Mustang GT',
     description: 'Nowe wydanie amerykańskiej legendy',
     techInfo: ['450KM', 'Tył', 'Automatyczna', 'Benzyna'],
@@ -176,6 +190,7 @@ export const carsInfo = [
   },
   {
     img: car8,
+    imgm: car8m,
     name: 'Ford Focus RS',
     description: '.. z każdego zrobi mistrza driftu',
     techInfo: ['350KM', '4x4', 'Automatyczna', 'Benzyna'],

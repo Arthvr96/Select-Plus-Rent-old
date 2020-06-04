@@ -1,8 +1,8 @@
-import CarouselWrapper from 'components/CarouselWrapper/CarouselWrapper';
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import media from 'utilites/media';
 import gsap from 'gsap';
+import media from 'utilites/media';
+import CarouselWrapper from 'components/CarouselWrapper/CarouselWrapper';
 
 const HeroSection = styled.section`
   position: fixed;
@@ -10,28 +10,31 @@ const HeroSection = styled.section`
   width: 100%;
   height: 50vh;
   margin-top: ${({ position }) => position}px;
+
   ${media.desktop`
     height:100vh;
   `}
 `;
 
 const Hero = () => {
-  let herosection = useRef(null);
+  let heroSection = useRef(null);
 
-  const getPos = () => {
+  const paralaxEffect = () => {
     let newPos = 0;
     newPos = (-1 * window.scrollY) / 2;
-    gsap.set(herosection, { y: newPos });
+    if (window.scrollY < window.innerHeight * 3) {
+      gsap.set(heroSection, { y: newPos });
+    }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', getPos, true);
+    window.addEventListener('scroll', paralaxEffect, true);
   });
 
   return (
     <HeroSection
       ref={(el) => {
-        herosection = el;
+        heroSection = el;
       }}
     >
       <CarouselWrapper />
