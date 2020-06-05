@@ -9,7 +9,7 @@ const CarsInfoSection = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.lightergrey};
 `;
 
 const Header = styled.h3`

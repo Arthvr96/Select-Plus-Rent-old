@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { zindex } from 'utilites/zindex';
+import media from 'utilites/media';
 import Navigation from 'components/Navigation/Navigation';
 
 const ButtonHamburger = styled.button`
@@ -13,6 +14,10 @@ const ButtonHamburger = styled.button`
   border: 0;
   background-color: transparent;
   cursor: pointer;
+
+  ${media.desktop`
+    display:none;
+  `}
 `;
 
 const HamburgerBox = styled.span`
@@ -100,7 +105,10 @@ class HamburgerMenu extends React.Component {
             <HamburgerInner isOpen={isOpen} />
           </HamburgerBox>
         </ButtonHamburger>
-        <Navigation linkActived={this.toggleHamburger} isOpen={isOpen} />
+        <Navigation
+          linkActived={window.innerWidth < 1100 ? this.toggleHamburger : ''}
+          isOpen={isOpen}
+        />
       </>
     );
   }

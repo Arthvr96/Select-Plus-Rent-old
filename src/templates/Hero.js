@@ -13,6 +13,7 @@ const HeroSection = styled.section`
 
   ${media.desktop`
     height:100vh;
+    top:0;
   `}
 `;
 

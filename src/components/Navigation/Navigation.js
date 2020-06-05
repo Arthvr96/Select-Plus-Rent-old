@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import { zindex } from 'utilites/zindex';
+import media from 'utilites/media';
 import { NavigationLinks as data } from 'data/navigationLinks';
 
 const NavigationSection = styled.nav`
@@ -15,6 +16,12 @@ const NavigationSection = styled.nav`
   transform: ${({ isOpen }) => (isOpen ? 'translateX(-100vw);' : 'translateX(0);')};
   background-color: ${({ theme }) => theme.colors.tertiary};
   transition: transform 1s ease-in-out;
+
+  ${media.desktop`
+    position:static;
+    height:100%;
+    background-color: transparent;
+  `}
 `;
 
 const NavigationList = styled.ul`
@@ -26,8 +33,20 @@ const NavigationList = styled.ul`
   height: 100vh;
   list-style: none;
 
+  ${media.desktop`
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content:flex-end;
+    height:100%;
+    padding-right: 13rem;
+  `}
+
   li {
+    margin: 2.8rem 0 0 2rem;
+    transform: translateY(-50%);
+    position: relative;
     margin-bottom: 4rem;
+    cursor: pointer;
   }
 
   li a {
@@ -36,6 +55,12 @@ const NavigationList = styled.ul`
     color: ${({ theme }) => theme.colors.font.secondary};
     text-decoration: none;
     text-transform: uppercase;
+
+    ${media.desktop`
+      font-size: ${({ theme }) => theme.size.desktop.s};
+      font-weight: ${({ theme }) => theme.fontWeight.normal};
+      text-transform: none;
+    `}
   }
 `;
 
@@ -52,6 +77,10 @@ const ContactBox = styled.div`
   background: #0c212a;
   transform: ${({ isOpen }) => (isOpen ? 'translateY(0%);' : 'translateY(100%);')};
   transition: transform 0.8s 0.8s ease-out;
+
+  ${media.desktop`
+    display:none;
+  `}
 
   p {
     font-size: ${({ theme }) => theme.size.mobile.s};
@@ -72,6 +101,10 @@ const AdditionalBgContactBox = styled.div`
   width: 100%;
   height: 5.6rem;
   background: #0c212a;
+
+  ${media.desktop`
+    display:none;
+  `}
 `;
 
 const Navigation = ({ isOpen, linkActived }) => {
