@@ -23,18 +23,22 @@ export const carsInfo = [
     techInfo: ['610KM', '4x4', 'Automatyczna', 'Benzyna'],
     priceingInfo: [
       {
+        numberOfCar: '0',
         priceName: 'Doba',
         price: '2499zł',
       },
       {
+        numberOfCar: '0',
         priceName: 'Weekend',
         price: '5999zł',
       },
       {
+        numberOfCar: '0',
         priceName: 'Tydzień',
         price: '9999zł',
       },
       {
+        numberOfCar: '0',
         priceName: 'Miesiąc',
         price: '27999zł',
       },
@@ -48,18 +52,22 @@ export const carsInfo = [
     techInfo: ['410KM', 'Tył', 'Automatyczna', 'Benzyna'],
     priceingInfo: [
       {
+        numberOfCar: '1',
         priceName: 'Doba',
         price: '899zł',
       },
       {
+        numberOfCar: '1',
         priceName: 'Weekend',
         price: '2199zł',
       },
       {
+        numberOfCar: '1',
         priceName: 'Tydzień',
         price: '3899zł',
       },
       {
+        numberOfCar: '1',
         priceName: 'Miesiąc',
         price: '8999zł',
       },
@@ -73,18 +81,22 @@ export const carsInfo = [
     techInfo: ['421KM', '4x4', 'Automatyczna', 'Benzyna'],
     priceingInfo: [
       {
+        numberOfCar: '2',
         priceName: 'Doba',
         price: '899zł',
       },
       {
+        numberOfCar: '2',
         priceName: 'Weekend',
         price: '2199zł',
       },
       {
+        numberOfCar: '2',
         priceName: 'Tydzień',
         price: '3899zł',
       },
       {
+        numberOfCar: '2',
         priceName: 'Miesiąc',
         price: '8999zł',
       },
@@ -98,18 +110,22 @@ export const carsInfo = [
     techInfo: ['420KM', '4x4', 'Automatyczna', 'Benzyna'],
     priceingInfo: [
       {
+        numberOfCar: '3',
         priceName: 'Doba',
         price: '699zł',
       },
       {
+        numberOfCar: '3',
         priceName: 'Weekend',
         price: '1699zł',
       },
       {
+        numberOfCar: '3',
         priceName: 'Tydzień',
         price: '2699zł',
       },
       {
+        numberOfCar: '3',
         priceName: 'Miesiąc',
         price: '6999zł',
       },
@@ -123,14 +139,17 @@ export const carsInfo = [
     techInfo: ['550KM', 'Tył', 'Automatyczna', 'Benzyna'],
     priceingInfo: [
       {
+        numberOfCar: '4',
         priceName: 'Doba',
         price: '1100zł',
       },
       {
+        numberOfCar: '4',
         priceName: 'Weekend',
         price: '3000zł',
       },
       {
+        numberOfCar: '4',
         priceName: 'Tydzień',
         price: '5000zł',
       },
@@ -147,18 +166,22 @@ export const carsInfo = [
     techInfo: ['400KM', '4x4', 'Automatyczna', 'Benzyna'],
     priceingInfo: [
       {
+        numberOfCar: '5',
         priceName: 'Doba',
         price: '799zł',
       },
       {
+        numberOfCar: '5',
         priceName: 'Weekend',
         price: '1999zł',
       },
       {
+        numberOfCar: '5',
         priceName: 'Tydzień',
         price: '3299zł',
       },
       {
+        numberOfCar: '5',
         priceName: 'Miesiąc',
         price: '8499zł',
       },
@@ -172,18 +195,22 @@ export const carsInfo = [
     techInfo: ['450KM', 'Tył', 'Automatyczna', 'Benzyna'],
     priceingInfo: [
       {
+        numberOfCar: '6',
         priceName: 'Doba',
         price: '800zł',
       },
       {
+        numberOfCar: '6',
         priceName: 'Weekend',
         price: '2500zł',
       },
       {
+        numberOfCar: '6',
         priceName: 'Tydzień',
         price: '4000zł',
       },
       {
+        numberOfCar: '6',
         hide: true,
       },
     ],
@@ -196,18 +223,22 @@ export const carsInfo = [
     techInfo: ['350KM', '4x4', 'Automatyczna', 'Benzyna'],
     priceingInfo: [
       {
+        numberOfCar: '7',
         priceName: 'Doba',
         price: '500zł',
       },
       {
+        numberOfCar: '7',
         priceName: 'Weekend',
         price: '1300zł',
       },
       {
+        numberOfCar: '7',
         priceName: 'Tydzień',
         price: '3000zł',
       },
       {
+        numberOfCar: '7',
         priceName: 'Miesiąc',
         price: '6000zł',
       },

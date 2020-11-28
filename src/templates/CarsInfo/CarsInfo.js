@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import PopUpReservation from 'components/PopUpReservation/PopUpReservation';
 import { carsInfo as data } from 'data/carsInfo';
 
 const CarsInfoSection = styled.section`
@@ -114,12 +115,25 @@ const paragraph = 'Zrealizuj swoje marzenia z naszą pomocą !';
 
 const CarsInfo = () => {
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [getPriceButton, setGetPriceButton] = useState();
   const deviceChecker = () => {
     if (window.innerWidth > 1100) {
       setIsDesktop(true);
     } else {
       setIsDesktop(false);
     }
+  };
+  const getPopUpReservation = (e) => {
+    setIsVisible(true);
+    window.scrollTo(0, window.scrollY + 2);
+    document.body.classList.add('disableScroll');
+    setGetPriceButton(e.target.id);
+  };
+
+  const cancelPopUpReservation = () => {
+    setIsVisible(false);
+    document.body.classList.remove('disableScroll');
   };
 
   useEffect(() => {
@@ -143,17 +157,27 @@ const CarsInfo = () => {
                 </li>
               ))}
             </CarTechInfo>
-            <PriceingWrapper>
-              {priceingInfo.map(({ priceName, price, hide }, i) => (
-                <PriceBox isHide={hide} key={`pricebox${i}`}>
-                  <h4>{priceName}</h4>
-                  <h3>{price}</h3>
+            <PriceingWrapper className="priceWrapper">
+              {priceingInfo.map(({ numberOfCar, priceName, price, hide }, i) => (
+                <PriceBox
+                  id={`carN${numberOfCar}priceN${i}`}
+                  onClick={getPopUpReservation}
+                  isHide={hide}
+                  key={`pricebox${i}`}
+                >
+                  <h4 id={`carN${numberOfCar}priceN${i}`}>{priceName}</h4>
+                  <h3 id={`carN${numberOfCar}priceN${i}`}>{price}</h3>
                 </PriceBox>
               ))}
             </PriceingWrapper>
           </Car>
         ))}
       </CarsWrapper>
+      <PopUpReservation
+        cancelPopUpReservation={cancelPopUpReservation}
+        isVisible={isVisible}
+        dataValue={getPriceButton}
+      />
     </CarsInfoSection>
   );
 };

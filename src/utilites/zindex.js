@@ -11,4 +11,5 @@ export const zindex = {
   lvl6: '7000',
   lvl7: '8000',
   lvl8: '9000',
+  lvl9: '19000',
 };
