@@ -20,7 +20,7 @@ export const carsInfo = [
     imgm: car1,
     name: 'Audi R8 V10',
     description: 'Głośny potwór z V10 za plecami',
-    techInfo: ['610KM', '4x4', 'Automatyczna', 'Benzyna'],
+    techInfo: ['610KM', '4x4', 'Automatycznaa', 'Benzyna'],
     priceingInfo: [
       {
         numberOfCar: '0',

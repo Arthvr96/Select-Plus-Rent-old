@@ -39,8 +39,7 @@ const SelectOptions = ({ carNumber, priceNumber }) => {
     setSelectedValue(e.value);
   };
 
-  useEffect(() => {
-    const e = document.getElementById('test');
+  const refreshReservationData = (e) => {
     setSelectedValue(e.value);
     setPrice(priceMap[priceNumber].price);
     e.addEventListener('change', chagneValue);
@@ -53,6 +52,11 @@ const SelectOptions = ({ carNumber, priceNumber }) => {
     } else {
       setPrice(priceMap[3].price);
     }
+  };
+
+  useEffect(() => {
+    const selectWraper = document.getElementById('selectWraper');
+    refreshReservationData(selectWraper);
   });
 
   return (
@@ -61,7 +65,7 @@ const SelectOptions = ({ carNumber, priceNumber }) => {
       <Paragraph>Koszt : {price}</Paragraph>
       <ChangePrice>
         <Paragraph>Zmień plan najmu: </Paragraph>
-        <SelectWraper id="test">
+        <SelectWraper id="selectWraper">
           <option value={selectedPrice}>{selectedPrice}</option>
           {filteredPriceMap.map(({ priceName, numberOfCar }) => {
             return (

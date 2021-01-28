@@ -25,6 +25,7 @@ export const primaryTheme = {
       l: '3.2rem',
       xl: '4.8rem',
       xxl: '5.6rem',
+      xxxl: '6.4rem',
     },
   },
   fontWeight: {

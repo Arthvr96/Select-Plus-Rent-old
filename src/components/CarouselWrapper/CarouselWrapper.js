@@ -78,6 +78,7 @@ const ContentWrapper = styled.div`
   height: 50vh;
 
   ${media.desktop`
+    align-items: center;
     height:100vh;
   `}
 `;
@@ -88,6 +89,12 @@ const Title = styled.h3`
   line-height: ${({ theme }) => theme.lineHeight.m};
   color: ${({ theme }) => theme.colors.font.secondary};
   margin: 0 3rem;
+
+  ${media.desktop`
+    font-size: ${({ theme }) => theme.size.desktop.xxxl};
+    font-weight: ${({ theme }) => theme.fontWeight.heavy};
+    line-height: ${({ theme }) => theme.lineHeight.xxl};
+  `}
 `;
 
 const Paragraph = styled.p`
@@ -97,6 +104,14 @@ const Paragraph = styled.p`
   color: ${({ theme }) => theme.colors.font.secondary};
   margin: 0 3rem;
   margin-top: 0.8rem;
+
+  ${media.desktop`
+    width: 50%;
+    max-width: 800px;
+    font-size: ${({ theme }) => theme.size.desktop.m};
+    font-weight: ${({ theme }) => theme.fontWeight.light};
+    line-height: ${({ theme }) => theme.lineHeight.m};
+  `}
 `;
 
 const CarouselWrapper = () => {

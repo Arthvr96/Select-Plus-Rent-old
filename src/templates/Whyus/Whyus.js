@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import media from 'utilites/media';
 import { guarantees as data } from 'data/guarantees';
 
-// import gsap from 'gsap';
 const WhyusWrapper = styled.section`
   position: relative;
   z-index: 50;
@@ -27,6 +26,12 @@ const Header = styled.h3`
   line-height: ${({ theme }) => theme.lineHeight.m};
   color: ${({ theme }) => theme.colors.font.primary};
   text-align: center;
+
+  ${media.desktop`
+    font-size: ${({ theme }) => theme.size.desktop.xl};
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
+    line-height: ${({ theme }) => theme.lineHeight.xxl};
+  `}
 `;
 
 const Paragraph = styled.p`
@@ -37,6 +42,12 @@ const Paragraph = styled.p`
   line-height: ${({ theme }) => theme.lineHeight.s};
   color: ${({ theme }) => theme.colors.font.primary};
   text-align: center;
+
+  ${media.desktop`
+    font-size: ${({ theme }) => theme.size.desktop.m};
+    font-weight: ${({ theme }) => theme.fontWeight.normal};
+    line-height: ${({ theme }) => theme.lineHeight.s};
+  `}
 `;
 
 const Wrapperguarantees = styled.div`
@@ -48,6 +59,23 @@ const Wrapperguarantees = styled.div`
   .guaratnee:last-of-type {
     margin-bottom: 2.4rem;
   }
+
+  ${media.desktop`
+    display: grid;
+    max-width: 1500px;
+    height: 100%;
+    margin-bottom: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem 3rem;
+    grid-template-areas:
+    ". . ."
+    ". . .";
+
+    .guaratnee:last-of-type {
+    margin-bottom: 0;
+  }
+  `}
 `;
 
 const Guarantee = styled.div`
@@ -63,6 +91,12 @@ const Guarantee = styled.div`
     justify-content: center;
     width: 6.4rem;
   }
+
+  ${media.desktop`
+    flex-direction: column;
+    min-height: 23rem;
+    margin-bottom: 0rem;
+  `}
 `;
 
 const GuaranteeHeader = styled.h4`
@@ -72,16 +106,27 @@ const GuaranteeHeader = styled.h4`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight.m};
   color: ${({ theme }) => theme.colors.font.primary};
+
+  ${media.desktop`
+    margin: 1.5rem 0 1.5rem 0;
+    font-size: ${({ theme }) => theme.size.desktop.m};
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
+    line-height: ${({ theme }) => theme.lineHeight.m};
+  `}
 `;
+
 const GuaranteeParagraph = styled.p`
   display: none;
-  width: 80%;
-  margin-bottom: 3.2rem;
-  font-size: ${({ theme }) => theme.size.mobile.s};
-  font-weight: ${({ theme }) => theme.fontWeight.light};
-  line-height: ${({ theme }) => theme.lineHeight.s};
-  color: ${({ theme }) => theme.colors.font.primary};
-  text-align: center;
+
+  ${media.desktop`
+    display: block;
+    width: 80%;
+    font-size: ${({ theme }) => theme.size.desktop.s};
+    font-weight: ${({ theme }) => theme.fontWeight.light};
+    line-height: ${({ theme }) => theme.lineHeight.s};
+    color: ${({ theme }) => theme.colors.font.primary};
+    text-align: center;
+  `}
 `;
 
 const headerOne = 'Dlaczego warto wybrać nas ?';
