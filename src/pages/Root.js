@@ -13,6 +13,7 @@ import Services from 'components/organisms/Services/Services';
 import Info from 'components/organisms/Info/Info';
 import About from 'components/organisms/About/About';
 import Section1 from 'components/organisms/Section1/Section1';
+import Section2 from '../components/organisms/Section2/Section2';
 import { Wrapper } from './Root.style';
 
 const Root = () => {
@@ -30,6 +31,7 @@ const Root = () => {
           <Info />
           <About />
           <Section1 />
+          <Section2 />
         </ThemeProvider>
       </Wrapper>
     </ApolloProvider>
