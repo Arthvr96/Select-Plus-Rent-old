@@ -12,6 +12,7 @@ import CarsInfo from 'components/organisms/CarsInfo/CarsInfo';
 import Services from 'components/organisms/Services/Services';
 import Info from 'components/organisms/Info/Info';
 import About from 'components/organisms/About/About';
+import Section2 from '../components/organisms/Section2/Section2';
 import { Wrapper } from './Root.style';
 
 const Root = () => {
@@ -28,6 +29,7 @@ const Root = () => {
           <Services />
           <Info />
           <About />
+          <Section2 />
         </ThemeProvider>
       </Wrapper>
     </ApolloProvider>
