@@ -8,7 +8,8 @@
     "prettier/react"
   ],
   "env": {
-    "jest": true
+    "jest": true,
+    "browser": true
   },
   "globals": {
     "window": true,
@@ -25,6 +26,10 @@
   "rules": {
     "react/jsx-filename-extension": 0,
     "react/state-in-constructor": 0,
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "react/prop-types": 0,
+    "no-constant-condition": 0,
+    "react/no-array-index-key": 0,
+    "no-nested-ternary": 0
   }
 }

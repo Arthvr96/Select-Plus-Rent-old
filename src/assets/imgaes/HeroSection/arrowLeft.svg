@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="35px" viewBox="0 0 25 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>multimedia-option (1)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hero" transform="translate(-20.000000, -495.000000)" fill="#FFFFFF">
+            <g id="Silder" transform="translate(-409.000000, -1.000000)">
+                <g id="Arrows" transform="translate(429.000000, 496.000000)">
+                    <g id="multimedia-option-(1)" transform="translate(12.500000, 17.500000) scale(-1, 1) translate(-12.500000, -17.500000) ">
+                        <path d="M24.4725456,16.5395506 L3.06190937,0.395791936 C2.36041485,-0.132829158 1.22467904,-0.131940489 0.524359855,0.398526301 C-0.175416866,0.928924731 -0.173608658,1.78813054 0.527976272,2.31716179 L20.664187,17.5000647 L0.527252989,32.6828992 C-0.174241531,33.2119988 -0.176049739,34.0706577 0.523636572,34.6011245 C0.874700268,34.8670415 1.33461812,35 1.79453597,35 C2.25327849,35 2.71138814,34.8679302 3.06181896,34.6038589 L24.4725456,18.4605103 C24.8104093,18.2063511 25,17.860454 25,17.5000647 C25,17.1396754 24.8098669,16.7941884 24.4725456,16.5395506 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
