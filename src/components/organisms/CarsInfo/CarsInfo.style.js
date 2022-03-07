@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'utilites/media';
 
 export const CarsInfoSection = styled.section`
   position: relative;
@@ -34,6 +35,14 @@ export const CarsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background: ${({ theme }) => theme.colors.lightergrey};
+
+  ${media.desktop`
+  display: grid;
+  padding: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  `}
 `;
 
 export const Car = styled.div`
@@ -45,6 +54,11 @@ export const Car = styled.div`
   img {
     width: 100%;
   }
+
+  ${media.desktop`
+  
+  width:100%
+  `}
 `;
 
 export const CarName = styled.h3`

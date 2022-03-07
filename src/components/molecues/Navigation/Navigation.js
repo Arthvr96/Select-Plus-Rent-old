@@ -14,7 +14,7 @@ const Navigation = ({ isOpen, linkActived }) => {
       <NavigationList>
         {data.map((item, i) => (
           <li key={item}>
-            <Link onClick={linkActived} to={`Section${i}`} smooth delay={1000} duration={2500}>
+            <Link onClick={linkActived} to={`Section${i}`} smooth delay={100} duration={1500}>
               {item}
             </Link>
           </li>

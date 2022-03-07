@@ -1,8 +1,14 @@
 import styled from 'styled-components';
+import media from 'utilites/media';
 
 export const AboutWrapper = styled.section`
   width: 100%;
   background: ${({ theme }) => theme.colors.tertiary};
+
+  ${media.desktop`
+  
+    padding: 3rem;
+  `}
 `;
 
 export const Header = styled.h3`
@@ -66,6 +72,12 @@ export const ContactWrapper = styled.ul`
     line-height: ${({ theme }) => theme.lineHeight.s};
     color: ${({ theme }) => theme.colors.font.secondary};
   }
+
+  ${media.desktop`
+  
+    flex-direction: row;
+    justify-content: center;
+  `}
 `;
 
 export const Footer = styled.footer`
