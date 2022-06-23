@@ -4,6 +4,8 @@ import pin from 'assets/imgaes/About/pin.svg';
 import facebook from 'assets/imgaes/About/facebook.svg';
 import instagram from 'assets/imgaes/About/instagram.svg';
 
+// Test
+
 export const aboutInfo = {
   boldtext: 'Select+ Rent - ',
   paragraphOne: 'Wypożyczalnia samochodów sportowych na terenie Trójmiasta.',
